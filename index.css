@@ -1,0 +1,90 @@
+@font-face { font-family: Minecraft; src: url('assets/font/Minecraft Seven_2.ttf'); }
+.body {
+    font-family: Minecraft;
+}
+.spacer {
+    height: 25px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+}
+.infoboard {
+    display: flex;
+    justify-content: center;
+}
+.about_me {
+    width:350px;
+}
+.profile {
+    width:350px;
+}
+.links {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, 0%);
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.profile_picture {
+    left: 50px;
+}
+.align_text_center {
+    display: block;
+    text-align: center;
+}
+.left_sidebar {
+    position: absolute;
+    top: 194px;
+    left: 0;
+    width:500px;
+}
+.right_sidebar {
+    position: absolute;
+    top: 194px;
+    right: 0;
+    width:500px;
+}
+.splash-wrapper {
+    position: absolute;
+    top: 140px;
+    transform: translateX(225px)
+}
+.splash {
+    display: inline-block;
+    text-shadow: 0.2ex 0.2ex #3F3F00;
+    font-size: 1rem;
+    white-space: nowrap;
+    transform-origin: center;
+    animation: pulse 0.5s ease-in-out infinite;
+}
+
+/* Pulse animation 0.0225*sin(x)+0.9925 */
+@keyframes pulse {
+    0%   { transform: rotate(-20deg) scale(0.97); }
+    6.25%   { transform: rotate(-20deg) scale(0.97171); }
+    12.5% { transform: rotate(-20deg) scale(0.97659); }
+    18.75%   { transform: rotate(-20deg) scale(0.98389); }
+    25%  { transform: rotate(-20deg) scale(0.9925); }
+    31.25%   { transform: rotate(-20deg) scale(1.00111); }
+    37.5% { transform: rotate(-20deg) scale(1.00841); }
+    43.75%   { transform: rotate(-20deg) scale(1.01329); }
+    50%  { transform: rotate(-20deg) scale(1.015); }
+    56.25%   { transform: rotate(-20deg) scale(1.01329); }
+    62.5% { transform: rotate(-20deg) scale(1.00841); }
+    68.75%   { transform: rotate(-20deg) scale(1.00111); }
+    75%  { transform: rotate(-20deg) scale(0.9925); }
+    81.25%   { transform: rotate(-20deg) scale(0.98389); }
+    87.5% { transform: rotate(-20deg) scale(0.97659); }
+    93.75%   { transform: rotate(-20deg) scale(0.97171); }
+    100% { transform: rotate(-20deg) scale(0.97); }
+}
+.transflag {
+    position: relative;
+    top: 2.10px;
+    image-rendering: pixelated;
+}
+
+
