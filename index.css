@@ -1,13 +1,28 @@
 @font-face { font-family: Minecraft; src: url('assets/font/Minecraft Seven_2.ttf'); }
-.body {
-    font-family: Minecraft;
+.html, body {
+    margin: 0;
+    min-height: 100%;
 }
-.spacer {
-    height: 25px;
+.body{
+    font-family: Minecraft;
+    background-color: #0D001C;
+    color: #FCFCFC;
+    min-height: 100vh;
+}
+.main_content {
+    width: 900px;
+    background-color: #27004C;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
 }
 .header {
+    background-color: #190033;
     display: flex;
     justify-content: center;
+    padding-bottom: 10px;
 }
 .infoboard {
     display: flex;
@@ -35,21 +50,9 @@
     display: block;
     text-align: center;
 }
-.left_sidebar {
-    position: absolute;
-    top: 194px;
-    left: 0;
-    width:500px;
-}
-.right_sidebar {
-    position: absolute;
-    top: 194px;
-    right: 0;
-    width:500px;
-}
 .splash-wrapper {
     position: absolute;
-    top: 140px;
+    top: 110px;
     transform: translateX(225px)
 }
 .splash {
@@ -61,7 +64,8 @@
     animation: pulse 0.5s ease-in-out infinite;
 }
 
-/* Pulse animation 0.0225*sin(x)+0.9925 */
+/* Pulse animation with formula 0.0225*sin(x)+0.9925 */
+/* Original:
 @keyframes pulse {
     0%   { transform: rotate(-20deg) scale(0.97); }
     6.25%   { transform: rotate(-20deg) scale(0.97171); }
@@ -80,11 +84,81 @@
     87.5% { transform: rotate(-20deg) scale(0.97659); }
     93.75%   { transform: rotate(-20deg) scale(0.97171); }
     100% { transform: rotate(-20deg) scale(0.97); }
+}*/
+/* y=1.05-(0.1*abs(.5*sin\left(pi*x))) */
+@keyframes pulse {
+    0%   { transform: rotate(-20deg) scale(1.05); }
+    6.25%   { transform: rotate(-20deg) scale(1.04); }
+    12.5% { transform: rotate(-20deg) scale(1.031); }
+    18.75%   { transform: rotate(-20deg) scale(1.0222); }
+    25%  { transform: rotate(-20deg) scale(1.0146); }
+    31.25%   { transform: rotate(-20deg) scale(1.0084); }
+    37.5% { transform: rotate(-20deg) scale(1.0038); }
+    43.75%   { transform: rotate(-20deg) scale(1.0009); }
+    50%  { transform: rotate(-20deg) scale(1.0); }
+    56.25%   { transform: rotate(-20deg) scale(1.0009); }
+    62.5% { transform: rotate(-20deg) scale(1.0038); }
+    68.75%   { transform: rotate(-20deg) scale(1.0084); }
+    75%  { transform: rotate(-20deg) scale(1.0146); }
+    81.25%   { transform: rotate(-20deg) scale(1.0222); }
+    87.5% { transform: rotate(-20deg) scale(1.031); }
+    93.75%   { transform: rotate(-20deg) scale(1.04); }
+    100% { transform: rotate(-20deg) scale(1.05); }
 }
-.transflag {
+.flagicon {
     position: relative;
     top: 2.10px;
     image-rendering: pixelated;
+}
+
+
+/* Sidepage CSS */
+.blog {
+    text-shadow: 0.5ex 0.45ex #3E3E3E;
+    text-align: center;
+    background-color: #20003C;
+    padding: 20px;
+}
+.blog_board {
+    text-shadow: 0.2ex 0.2ex #3E3E3E;
+    width: 700px;
+    margin: auto;
+}
+.blog_article {
+    text-shadow: 0.2ex 0.2ex #3E3E3E;
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #2C0059;
+    width: 600px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*height: 200px; <-- Use */
+}
+.blog_article_title {
+    text-shadow: 0.32ex 0.32ex #3E3E3E;
+    display: block;
+    text-align: center;
+}
+.blog_content {
+    text-shadow: 0.2ex 0.2ex #3E3E3E;
+    width: 600px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.blog_title:link {
+    color: #7652A5;
+    text-shadow: 0.2ex 0.2ex #1C1428;
+}
+.blog_title:visited {
+    color: #7652A5;
+    text-decoration: none;
+}
+.blog_title:hover {
+    color: #846DA3; /* optional hover color */
 }
 
 
